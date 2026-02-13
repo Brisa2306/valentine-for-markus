@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<style>
+body {
+  background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: white;
+  color: #e75480;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.section {
+  display: none;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.heart {
+  font-size: 50px;
+  animation: beat 1s infinite alternate;
+  margin-top: 20px;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.3); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Are you sure you want to open this? ❤️</h1>
+<button onclick="nextSection(1)">Open My Heart</button>
+
+<div id="section1" class="section">
+  <p>Okay… but only because it’s you. 😌</p>
+  <button onclick="nextSection(2)">Keep going</button>
+</div>
+
+<div id="section2" class="section">
+  <p>Happy Valentine’s Day, Markus ❤️</p>
+  <p>Even from miles away, you still make my heart feel close.</p>
+  <button onclick="nextSection(3)">There’s more</button>
+</div>
+
+<div id="section3" class="section">
+  <p>Loving you from far away isn’t always easy for me.</p>
+  <p>But it’s something I still choose.</p>
+  <p>I don’t need big gifts. I just want us to keep choosing each other.</p>
+  <button onclick="nextSection(4)">Last thing…</button>
+</div>
+
+<div id="section4" class="section">
+  <p>I may not have money for grand gestures.</p>
+  <p>But I have intention. Effort. And feelings that are real.</p>
+  <p>You matter to me.</p>
+  <p>— Bridget ❤️</p>
+  <button onclick="nextSection(5)">Answer me</button>
+</div>
+
+<div id="section5" class="section">
+  <p>Will you be my Valentine… for this one and every one after? 💌</p>
+  <button onclick="showHeart()">Yes ❤️</button>
+</div>
+
+<div id="heartMessage" class="section">
+  <p>🥰 I’m so happy! You already are my Valentine.</p>
+  <div class="heart">❤️</div>
+</div>
+
+</div>
+
+<script>
+function nextSection(number) {
+  document.getElementById("section" + number).style.display = "block";
+}
+
+function showHeart() {
+  document.getElementById("heartMessage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
